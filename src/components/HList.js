@@ -12,7 +12,13 @@ import React from 'react';
 export default function HList(props) {
     return (
         <div className="hl-container">
-            <h2 className="hl-title">{props.title}</h2>
+            <div className="hl-header">
+                <h2 className="hl-title">{props.title}</h2>
+                <div className="scroll-controls">
+                    <button>&lt;</button>
+                    <button>&gt;</button>
+                </div>
+            </div>
             <div className="hl">
                 {props.list}
             </div>

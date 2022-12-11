@@ -142,12 +142,36 @@ main {
 
 .hl-title {
   margin-top: 0;
+  display: inline-block;
 }
 
 .hl {
   display: flex;
   flex-direction: row;
   overflow-x: scroll;
+}
+
+.hl-header {
+  display: flex;
+  flex-direction: row;
+  height: fit-content;
+  padding: 0;
+}
+
+.scroll-controls {
+  display: inline-block;
+  min-width: 100px;
+  text-align: right;
+  margin: -4px 0 0 auto;
+  height: fit-content;
+}
+
+.scroll-controls > button {
+  padding: 0.75rem;
+  font-weight: bold;
+  height: fit-content;
+  border-radius: var(--border-radius-1);
+  margin-left: 0.5rem;
 }
 
 .tile {
