@@ -1,23 +1,29 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
+import HomeHeader from './components/HomeHeader';
+import HList from './components/HList';
+import Tile from './components/Tile';
+// simulating data from api calls
+import sectors from './demoData';
 
 function App() {
+  const sectorTiles = sectors.map(data => {
+    return (
+      <Tile
+        key={data.id}
+        image={data.image}
+        title={data.title}
+        description={data.description}
+        link={data.link} />
+    );
+  });
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <HomeHeader />
+      <main>
+        <HList title="Featured Professions" list={sectorTiles}/>
+      </main>
     </div>
   );
 }
