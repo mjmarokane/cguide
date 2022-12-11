@@ -11,6 +11,7 @@
   --dark-text-color: black;
   /* other */
   --main-box-shadow: 1px 1px 5px 0 grey;
+  --short-transition-time: 0.3s;
 }
 
 body {
@@ -172,6 +173,14 @@ main {
   height: fit-content;
   border-radius: var(--border-radius-1);
   margin-left: 0.5rem;
+  border: 1px solid var(--scheme-color-2);
+  background-color: white;
+}
+
+.scroll-controls > button:hover {
+  transition: var(--short-transition-time);
+  border-color: black;
+  filter: brightness(95%);
 }
 
 .tile {
