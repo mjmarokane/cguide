@@ -22,7 +22,11 @@ function App() {
     <div className="App">
       <HomeHeader />
       <main>
-        <HList title="Explore Professions" list={sectorTiles}/>
+        <HList 
+          title="Explore Professions"
+          list={sectorTiles}
+          callToAction="See All"
+          />
       </main>
     </div>
   );

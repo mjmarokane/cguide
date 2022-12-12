@@ -16,6 +16,7 @@ export default function HList(props) {
             <div className="hl">
                 {props.list}
             </div>
+            <button className="button">{props.callToAction}</button>
         </div>
     );
 }
