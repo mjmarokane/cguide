@@ -145,6 +145,7 @@ main {
   padding: var(--small-padding) var(--medium-padding);
   border-radius: var(--border-radius-1);
   box-shadow: var(--main-box-shadow);
+  text-align: center;
 }
 
 .hl-title {
@@ -156,7 +157,6 @@ main {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  align-items: center;
   flex-wrap: wrap;
 }
 
@@ -176,14 +176,11 @@ main {
   border-radius: var(--border-radius-1);
   margin-right: var(--small-margin);
   margin-bottom: 0.5rem;
+  text-align: left;
 }
 
 .tile:hover {
   border-color: black;
-}
-
-.tile:active {
-  border-color: transparent;
 }
 
 .tile-image {
@@ -202,7 +199,22 @@ main {
   margin: 0;
 }
 
-/* Media queries */
-* {
-  border: 1px solid red;
+button {
+  background-color: var(--scheme-color-1);
+  border-radius: var(--border-radius-1);
+  border: none;
+  color: var(--bright-text-color);
+  padding: 0.5rem 2rem;
+  font-size: 1rem;
+  font-weight: bold;
 }
+
+button:hover {
+  filter: brightness(115%);
+}
+
+.hl-container > button {
+  margin: 2rem auto 1rem;
+}
+
+/* Media queries */
